@@ -21,6 +21,36 @@ $cvLightGray: #303032;
         max-width: 100%;
     }
 
+    .hidden{
+        display: none !important;
+    }
+
+    .languageBar{
+        color: white;
+        background-color: #303032;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .languageSelect{
+            padding: 0;
+            display: flex;
+            li{
+                list-style-type: none;
+                cursor: pointer;
+                color: #999999;
+                border-radius: 5px;
+                padding: 5px;
+            }
+            .languageSeperator{
+                margin: 0 3px
+            }
+            .current{
+                color: white;
+                background-color: $cvAccent;
+            }
+        }
+    }
+
     .leftCol{
         color: white;
         background-color: #303032;

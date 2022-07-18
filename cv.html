@@ -12,33 +12,46 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    
-
 
     <div class="cv-wrapper">
 
         <div class="leftCol">
             <div class="leftWrap">
+                <div class="languageBar">
+                    <ul class="languageSelect text-sm">
+                        <li class="lngOpt english current">English</li>
+                        <li class="languageSeperator">/</li>
+                        <li class="lngOpt bulgarian">Български</li>  
+                    </ul>
+                </div>
                 <div class="profileImg">
                     <img src="../images/1637847935527.jfif" alt="">
                 </div>
                 <div class="cv-nameMobile">
-                    <h1 class="text-5xl">
+                    <h1 class="text-5xl lang-en">
                         Nikola <span>Ivandjikov</span>
                     </h1>
-                    <h2 class="text-2xl">
+                    <h1 class="text-5xl lang-bg hidden">
+                        Никола <span>Иванджиков</span>
+                    </h1>
+                    <h2 class="text-2xl lang-en">
                         Front-end developer
+                    </h2>
+                    <h2 class="text-2xl lang-bg hidden">
+                        Front-end разработчик
                     </h2>
                 </div>
                 <div class="cv-skill">
-                    <h2 class="text-xl">Contact</h2>
+                    <h2 class="text-xl lang-en">Contact</h2>
+                    <h2 class="text-xl lang-bg hidden">Контакти</h2>
                     <a href="tel:+359896045241" class="contact text-base"><i class="fa-solid fa-mobile text-xl"></i> +359896045241</a>
                     <a href="mailto:nivandjikov96@gmail.com" class="contact text-base"><i class="fa-solid fa-envelope text-xl"></i> nivandjikov96@gmail.com</a>
-                    <a href="nivandjikov.com" target="_blank" class="contact text-base"><i class="fa-solid fa-house text-xl"></i></i> ivandjikov.com</a>
+                    <!-- <a href="nivandjikov.com" target="_blank" class="contact text-base"><i class="fa-solid fa-house text-xl"></i></i> ivandjikov.com</a> -->
                     <a href="https://www.linkedin.com/in/nikola-ivandjikov-aab0211a3/" target="_blank" class="contact text-base"><i class="fa-brands fa-linkedin-in text-xl"></i> Nikola Ivandjikov</a>
                 </div>
                 <div class="cv-skill">
-                    <h2 class="text-xl">Professional Skills</h2>
+                    <h2 class="text-xl lang-en">Professional Skills</h2>
+                    <h2 class="text-xl lang-bg hidden">Професионални умения</h2>
                     <span class="text-base block">HTML5</span>
                     <!-- - -->
                     <span class="text-base block">CSS</span>
@@ -61,24 +74,33 @@
         <div class="rightCol">
             <div class="rightWrap">
                 <div class="cv-name">
-                    <h1 class="text-5xl">
+                    <h1 class="text-5xl lang-en">
                         Nikola <span>Ivandjikov</span>
                     </h1>
-                    <h2 class="text-2xl">
+                    <h1 class="text-5xl lang-bg hidden">
+                        Никола <span>Иванджиков</span>
+                    </h1>
+                    <h2 class="text-2xl lang-en">
                         Front-end developer
+                    </h2>
+                    <h2 class="text-2xl lang-bg hidden">
+                        Front-end разработчик
                     </h2>
                 </div>
                 <div class="cv-resume">
                     <div class="resume-title text-base">
                         <i class="fa-solid fa-user text-xl"></i>
-                        <h2>Profile</h2>
+                        <h2 lang="en" class="lang-en">Profile</h2>
+                        <h2 lang="bg" class="lang-bg hidden">Профил</h2>
                     </div>
-                    <p class="text-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p class="text-lg lang-en">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p class="text-lg lang-bg hidden">Lorem Ipsum е просто фиктивен текст от печатарската и наборната индустрия. Lorem Ipsum е стандартният фиктивен текст в индустрията още от 1500 г., когато неизвестен печатар взел галера с шрифт и я задраскал, за да направи книга с образци на шрифта. Той е оцелял не само през петте века, но и през скока в електронното наборно печатане, като е останал по същество непроменен. Популяризиран е през 60-те години на миналия век с издаването на листове Letraset, съдържащи пасажи от Lorem Ipsum, а напоследък и със софтуера за настолно публикуване като Aldus PageMaker, включващ версии на Lorem Ipsum.</p>
                 </div>
                 <div class="cv-resume">
                     <div class="resume-title text-base">
                         <i class="fa-solid fa-id-card text-xl"></i>
-                        <h2>Working experience</h2>
+                        <h2 class="lang-en">Working experience</h2>
+                        <h2 class="lang-bg hidden">ТРУДОВ ОПИТ</h2>
                     </div>
                     <div class="cv-job">
                         <h3 class="text-xl">First job</h3>
@@ -102,7 +124,27 @@
             </div>
         </div>
 
-
     </div>
+
 </body>
 </html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+$('.languageSelect .lngOpt').click(function(e) {
+
+    //Toggle tab link
+    $(this).addClass('current').siblings().removeClass('current');
+
+    if($(this).hasClass('bulgarian')){
+        console.log('Bulgaria')
+        $('.lang-bg').removeClass("hidden");
+        $('.lang-en').addClass("hidden");
+    }else{
+        console.log('England')
+        $('.lang-en').removeClass("hidden"); 
+        $('.lang-bg').addClass("hidden");
+    }
+});
+</script>
