@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'HKGrotesk';
+    src: url(../fonts/HKGrotesk-Regular.woff2);
+}
+$cvAccent: #0c94c8;
+$cvLightGray: #303032;
+
+.cv-wrapper{
+    display: grid;
+    grid-template-columns: 336px 1fr;
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 10px;
+    font-family: 'HKGrotesk', 'Arial', 'Helvetica', sans-serif;
+
+    h2, h3, h4{
+        font-weight: lighter;
+    }
+    
+    img{
+        max-width: 100%;
+    }
+
+    .leftCol{
+        color: white;
+        background-color: #303032;
+        padding: 25px;
+        .cv-nameMobile{
+            display: none;
+            h1{
+                margin: 25px 0 0 0;
+                text-transform: uppercase;
+                span{
+                    color: $cvAccent;
+                }
+            }
+            h2{
+                margin: 5px 0 25px 0;
+            }
+        }
+        .leftWrap{
+            max-width: 300px;
+            margin: auto;
+            position: sticky;
+            top: 25px;
+        }
+        .profileImg{
+            text-align: center;
+            max-width: 200px;
+            margin: auto;
+            img{
+                border-radius: 100%;
+                border: 3px solid white;
+            }
+        }
+        .cv-skill{
+            padding: 10px 0;
+            h2{
+                text-transform: uppercase;
+                position: relative;
+            }
+            h2::before{
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                border-bottom: 2px solid #7e7e80;
+                width: 100%;
+            }
+            h2::after{
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                right: 0;
+                border-bottom: 2px solid $cvAccent;
+                width: 35px;
+            }
+        }
+        .contact{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 15px;
+            margin: 5px 0;
+            color: white;
+            text-decoration: none;
+            width: fit-content;
+            i{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+                border-radius: 5px;
+                background-color: $cvAccent;
+                
+            }
+        }
+        .block{
+            display: block;
+            margin: 5px 0;
+        }
+    }
+
+    .rightCol{
+        color: black;
+        background-color: #f7f7f7;
+        .rightWrap{
+            padding: 25px;
+            .cv-name{
+                margin: 25px 0 50px 0;
+                h1{
+                    text-transform: uppercase;
+                    margin: 10px 0;
+                    span{
+                        color: $cvAccent;
+                        position: relative;
+                        display: inline-block;
+                    }
+                    span::before{
+                        content: "";
+                        border-bottom: 5px solid $cvAccent;
+                        position: absolute;
+                        top: -10px;
+                        right: 0;
+                        width: 70px;
+                    }
+                }
+                h2{
+                    margin: 0;
+                }
+            }
+            .cv-resume{
+                .resume-title{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 15px;
+                    position: relative;
+                    i{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 5px;
+                        background-color: $cvAccent;
+                        color: white;
+                    }
+                    h2{
+                        text-transform: uppercase;
+                    }
+                }
+                .resume-title::before{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    border-bottom: 2px solid #707070;
+                    width: 100%;
+                }
+                .resume-title::after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    border-bottom: 2px solid $cvAccent;
+                    width: 70px;
+                }
+            }
+            .cv-job{
+                margin-bottom: 80px;
+                h3{
+                    margin: 10px 0;
+                }
+                span{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 25px;
+                    color: $cvAccent;
+                    font-style: italic;
+                    .workedUntil{
+                        color: black;
+                        font-style: normal;
+                    }   
+                }
+            }
+
+        }
+       
+    }
+    
+
+    
+
+    .text-xs{font-size: 0.75rem;line-height: 1rem;}
+    .text-sm{font-size: 0.875rem; line-height: 1.25rem;}
+    .text-base{font-size: 1rem; line-height: 1.5rem;}
+    .text-lg{font-size: 1.125rem; line-height: 1.75rem;}
+    .text-xl{font-size: 1.25rem; line-height: 1.75rem;}
+    .text-2xl{font-size: 1.5rem; line-height: 2rem;}
+    .text-3xl{font-size: 1.875rem; line-height: 2.25rem;}
+    .text-4xl{font-size: 2.25rem; line-height: 2.5rem;}
+    .text-5xl{font-size: 3rem; line-height: 1;}
+    .text-6xl{font-size: 3.75rem; line-height: 1.1;}
+    .text-7xl{font-size: 4.5rem; line-height: 1.2;}
+    .text-8xl{font-size: 6rem; line-height: 1.1;}
+
+
+
+
+
+
+
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .cv-wrapper{
+        grid-template-columns: 1fr;
+
+        .text-sm{font-size: 0.75rem;line-height: 1rem;}
+        .text-base{font-size: 0.875rem; line-height: 1.25rem;}
+        .text-lg{font-size: 1rem; line-height: 1.5rem;}
+        .text-xl{font-size: 1.125rem; line-height: 1.75rem;}
+        .text-2xl{font-size: 1.25rem; line-height: 1.75rem;}
+        .text-3xl{font-size: 1.5rem; line-height: 2rem;}
+        .text-4xl{font-size: 1.875rem; line-height: 2.25rem;}
+        .text-5xl{font-size: 2.25rem; line-height: 2.5rem;}
+        .text-6xl{font-size: 3rem; line-height: 1;}
+        .text-7xl{font-size: 3.75rem; line-height: 1.1;}
+        .text-8xl{font-size: 4.5rem; line-height: 1.2;}
+
+       .leftCol{
+            .leftWrap{
+                max-width: none;
+                .cv-nameMobile{
+                    display: block;
+                }
+            }
+            
+       }
+
+       .rightCol{
+        .cv-name{
+            display: none;
+        }
+       }
+       
+
+
+    }
+}
