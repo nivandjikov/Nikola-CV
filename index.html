@@ -17,12 +17,12 @@
 
         <div class="leftCol">
             <div class="leftWrap">
-                <div class="languageBar">
-                    <ul class="languageSelect text-sm">
-                        <li class="lngOpt english current">English</li>
-                        <li class="languageSeperator">/</li>
-                        <li class="lngOpt bulgarian">Български</li>  
-                    </ul>
+                <div class="languageBar text-sm">
+                    <input type="radio" name="languageSelect" value="English" id="English" checked />
+                    <label for="English">English</label>
+                    <span class="languageSeperator text-base">/</span>
+                    <input type="radio" name="languageSelect" value="Bulgarian" id="Bulgarian" />
+                    <label for="Bulgarian">Български</label>
                 </div>
                 <div class="profileImg">
                     <img src="images/profilePic.jpg" alt="">
@@ -94,7 +94,7 @@
                         <h2 class="lang-bg hidden">Профил</h2>
                     </div>
                     <p class="text-lg lang-en">Hello! My name is Nikola and I am <span class="current_age"></span> years old. I've been into computers since I was a kid, first I started with gaming, and then with attempts to build websites on the now non-existent free platform ovo.bg, and a few attempts on wordpress, which never reached the WWW. Those were the years when I decided that I would do Front-end. Fast forward <i class="fa-solid fa-arrow-right-long"></i> I graduated with a Bachelor's degree in "Software Technology and Design" from Plovdiv University "Paisii Hilendarski" in 2019. And since 2017 I have been actively working in IT.</p>
-                    <p class="text-lg lang-bg hidden">Здравейте! Казвам се Никола и съм на <span class="current_age"></span> години. От малък се занимавам с компютри, като първоначално започнах с игрите, а след това и с опити за построяване на сайтове във вече изчезналата безплатна платформа ovo.bg, както и няколко опита на wordpress, който така и не достигат до WWW. Това бяха годините в които реших, че ще се занимавам с Front-end. Бърз преход напред <i class="fa-solid fa-arrow-right-long"></i> Завърших бакалавър "Софтуерни технологии и дизайн" в Пловдивски университет "Паисий Хилендарски" през 2019г. А от 2017г. работя активно в IT сферата.</p>
+                    <p class="text-lg lang-bg hidden">Здравейте! Казвам се Никола и съм на <span class="current_age"></span> години. От малък се занимавам с компютри, като първоначално започнах с изработване на банери на известна игра с цел привличане на играчи към хостван от мен сървър, а след това и с опити за построяване на сайтове във вече изчезналата безплатна платформа ovo.bg, както и няколко опита на wordpress, които така и не достигнаха до WWW. Това бяха годините, в които реших, че ще се занимавам с Front-end. Бърз преход напред <i class="fa-solid fa-arrow-right-long"></i> През 2019г. завърших бакалавър "Софтуерни технологии и дизайн" в Пловдивски университет "Паисий Хилендарски", а от началото на 2021г. карам курсове в SoftUni със специалност JS Web Developer, като имам сертификати за успешно завършените модули. Още като студент започнах да практикувам и да работя в IT сферата.</p>
                 </div>
                 <div class="cv-resume">
                     <div class="resume-title text-base">
@@ -114,16 +114,18 @@
                     </div>
                     <div class="cv-job lang-bg hidden">
                         <h3 class="text-xl">Front End разработчик/Създател на продуктови целеви страници</h3>
-                        <span class="company text-lg">Laptop.bg - Remote <div class="workedUntil">Януари 2020-Настояще</div></span>
-                        <p class="text-lg">Основното ми задължение е изработване на продуктови целеви страници използвайки материали от вендорите. Работя с PSD, InDesign, както и интегрирам готови проекти от вендорите в системата на Laptop.bg. Имам изработени над 200+ проекта от както съм на тази позиция. Също така проектирам и изработвам SVG изображения които използваме като стикери в продуктовата страница на лаптопите. От началото на 2022г. работя по дизайна сайта Laptopmedia.com, като основната цел е напълно респонсив дизайн. Благодарение на Tailwind.css фреймуърка успях да постигна много добри резултати, като дори успях да сведа Cumulative Layout Shift (CLS) до 0.</p>
+                        <span class="company text-lg">Laptop.bg - Дистанционно <div class="workedUntil">Януари 2020-Настояще</div></span>
+                        <p class="text-lg">Основното ми задължение е изработване на продуктови целеви страници, използвайки материали от производителите на продуктите. Имам изработени над 200+ проекта на тази позиция. Също така проектирам и изработвам SVG изображения, които използваме като стикери в страниците на най-търсените продукти. От началото на 2022г. работя по дизайна на сайта Laptopmedia.com, като основната цел е напълно респонсив дизайн. Благодарение на Tailwind.css фреймуърка успях да постигна много добри резултати, като дори успях да сведа Cumulative Layout Shift (CLS) до 0.</p>
                         <ul class="text-base">
                             <li>Над 200+ лендинг страници</li>
                             <li>Опит с множество JS и CSS библиотеки, като: AOS, Swiper, Slick slider, simpleParallax.js, jQuery Reel, FancyApps, Gsap и др.</li>
+                            <li>Опит с PSD, InDesign, Figma</li>
+                            <li>Добър UX/UI благодарение на опита, който черпя от най-добрите в областта (ASUS, MSI, Apple и др.)</li>
                         </ul>
                     </div>
                     <!-- - -->
                     <div class="cv-job lang-en">
-                        <h3 class="text-xl">Content team lead</h3>
+                        <h3 class="text-xl">Team Lead - Content Entry</h3>
                         <span class="company text-lg">Laptop.bg - Remote <div class="workedUntil">Jan 2020-Present</div></span>
                         <p class="text-lg">My main duty is making product landing pages using materials from vendors. I work with PSD, InDesign, and integrate finished projects from vendors into the Laptop.bg system. I have done over 200+ projects since I have been in this position. Since the beginning of 2022, I have been working on the design of the Laptopmedia.com website, with the main goal being a fully responsive design. Thanks to Tailwind.css framework I managed to achieve very good results, I even managed to reduce Cumulative Layout Shift (CLS) to 0.</p>
                         <ul>
@@ -132,12 +134,52 @@
                         </ul>
                     </div>
                     <div class="cv-job lang-bg hidden">
-                        <h3 class="text-xl">Front End разработчик/Създател на продуктови целеви страници</h3>
-                        <span class="company text-lg">Laptop.bg - Remote <div class="workedUntil">Януари 2020-Настояще</div></span>
-                        <p class="text-lg">Основното ми задължение е изработване на продуктови целеви страници използвайки материали от вендорите. Работя с PSD, InDesign, както и интегрирам готови проекти от вендорите в системата на Laptop.bg. Имам изработени над 200+ проекта от както съм на тази позиция. От началото на 2022г. работя по дизайна сайта Laptopmedia.com, като основната цел е напълно респонсив дизайн. Благодарение на Tailwind.css фреймуърка успях да постигна много добри резултати, като дори успях да сведа Cumulative Layout Shift (CLS) до 0.</p>
+                        <h3 class="text-xl">Ръководител на екипа качващ съдържание</h3>
+                        <span class="company text-lg">Laptop.bg - Дистанционно <div class="workedUntil">Март 2021-Настояще</div></span>
+                        <p class="text-lg">Основните ми задължения са - оптималното разпределяне на задачите между колегите от екипа, да следя количеството качени продукти и спазването на дадените срокове. Периодично провеждам онлайн срещи с екипа, с цел по-добра комуникация и разрешаване на създали се проблеми в работата им. Това ми помага и при воденето на кореспонденция между моя екип и програмистите - за интегриране на нови функции, които да улеснят работата на Content Entry отдела. Създал съм специални photoshop action-и, с които лесно и бързо да се оразмеряват изображенията за продуктовите страници с един клик. Работя с продуктовите мениджъри за оптимизиране на филтрите и категориите на сайта.</p>
                         <ul class="text-base">
-                            <li>Над 200+ лендинг страници</li>
-                            <li>Опит с множество JS и CSS библиотеки, като: AOS, Swiper, Slick slider, simpleParallax.js, jQuery Reel, FancyApps, Gsap и др.</li>
+                            <li>Поемане на отговорност</li>
+                            <li>Спазване на срокове</li>
+                            <li>Работа в екип</li>
+                        </ul>
+                    </div>
+                    <!-- - -->
+                    <div class="cv-job lang-en">
+                        <h3 class="text-xl">Content Entry</h3>
+                        <span class="company text-lg">Laptop.bg - Remote <div class="workedUntil">Jan 2020-Present</div></span>
+                        <p class="text-lg">My main duty is making product landing pages using materials from vendors. I work with PSD, InDesign, and integrate finished projects from vendors into the Laptop.bg system. I have done over 200+ projects since I have been in this position. Since the beginning of 2022, I have been working on the design of the Laptopmedia.com website, with the main goal being a fully responsive design. Thanks to Tailwind.css framework I managed to achieve very good results, I even managed to reduce Cumulative Layout Shift (CLS) to 0.</p>
+                        <ul>
+                            <li>Lorem Ipsum is simply dummy text of the print</li>
+                            <li>Lorem Ipsum is simply dummy text of the print</li>
+                        </ul>
+                    </div>
+                    <div class="cv-job lang-bg hidden">
+                        <h3 class="text-xl">Оператор въвеждане на данни</h3>
+                        <span class="company text-lg">Laptop.bg - Дистанционно <div class="workedUntil">Юни 2018-Януари 2021</div></span>
+                        <p class="text-lg">Основните ми задължения са - да следя за налични продукти, в сайтовете на доставчиците и да ги качвам в админа на Laptop.bg. За да кача даден продукт, първо преглеждам подробно дали има несъответствие между характеристиките, предоставени от доставчика и производителя, ако има преглеждам видео ревюта или търся информация от достоверни източници. Работя с имидж банки от производителите и при нужда търся изображения в интернет. Като допълнителни задачи - правя преводи на продуктовите целеви страници от Английски на Български.</p>
+                        <ul class="text-base">
+                            <li>Опит с търсенето на информация в интернет</li>
+                            <li>В крак с най-новите технологии</li>
+                            <li>Много добро ниво на английски език</li>
+                        </ul>
+                    </div>
+                    <!-- - -->
+                    <div class="cv-job lang-en">
+                        <h3 class="text-xl">Content Entry</h3>
+                        <span class="company text-lg">Laptop.bg - Remote <div class="workedUntil">Jan 2020-Present</div></span>
+                        <p class="text-lg">My main duty is making product landing pages using materials from vendors. I work with PSD, InDesign, and integrate finished projects from vendors into the Laptop.bg system. I have done over 200+ projects since I have been in this position. Since the beginning of 2022, I have been working on the design of the Laptopmedia.com website, with the main goal being a fully responsive design. Thanks to Tailwind.css framework I managed to achieve very good results, I even managed to reduce Cumulative Layout Shift (CLS) to 0.</p>
+                        <ul>
+                            <li>Lorem Ipsum is simply dummy text of the print</li>
+                            <li>Lorem Ipsum is simply dummy text of the print</li>
+                        </ul>
+                    </div>
+                    <div class="cv-job lang-bg hidden">
+                        <h3 class="text-xl">Оператор въвеждане на данни - стаж</h3>
+                        <span class="company text-lg">Laptopmedia.com - офис гр.Пловдив <div class="workedUntil">Юли 2017-Октомври 2017</div></span>
+                        <p class="text-lg">Работя с интерфейса на Wordpress като качвам лаптопи в новоизградения каталог на Laptopmedia, вземайки информацията за спецификациите от Amazon.com, също така добавям серии и оразмерявам изображения.</p>
+                        <ul class="text-base">
+                            <li>Опит с работа в Wordpress</li>
+                            <li>Работа в офис среда</li>
                         </ul>
                     </div>
                     <!-- - -->
@@ -155,28 +197,57 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <script>
-$('.languageSelect .lngOpt').click(function(e) {
-    //Toggle tab link
-    $(this).addClass('current').siblings().removeClass('current');
+// $('.languageSelect input').click(function(e) {
+//     // //Toggle tab link
+//     // $(this).addClass('current').siblings().removeClass('current');
 
-    if($(this).hasClass('bulgarian')){
-        console.log('Bulgaria')
-        $('.lang-bg').removeClass("hidden");
-        $('.lang-en').addClass("hidden");
-    }else{
-        console.log('England')
-        $('.lang-en').removeClass("hidden"); 
-        $('.lang-bg').addClass("hidden");
+//     if($(this).hasClass('bulgarian')){
+//         console.log('Bulgaria')
+//         $('.lang-bg').removeClass("hidden");
+//         $('.lang-en').addClass("hidden");
+//     }else{
+//         console.log('England')
+//         $('.lang-en').removeClass("hidden"); 
+//         $('.lang-bg').addClass("hidden");
+//     }
+// });
+
+$(document).ready(function(){
+    var radios = document.getElementsByName("languageSelect");
+    var val = localStorage.getItem('languageSelect');
+    for(var i=0;i<radios.length;i++){
+        if(radios[i].value == val){
+        radios[i].checked = true;
+        }
     }
+    $('input[name="languageSelect"]').on('change', function(){
+        localStorage.setItem('languageSelect', $(this).val());
+    });
+    current_language();
 });
 
+$(document).click(function(e) {
+    current_language();
+});
 
-function current_age(birthday, today) 
-{
-  var diff =(today.getTime() - birthday.getTime()) / 1000;
-   diff /= (60 * 60 * 24);
-  return Math.abs(Math.round(diff/365.25));
-   
+function current_language() {
+    if($('input#English').is(':checked')) {
+            console.log('England')
+            $('.lang-en').removeClass("hidden"); 
+            $('.lang-bg').addClass("hidden");
+    }
+    else{
+        console.log('Bulgaria')
+            $('.lang-bg').removeClass("hidden");
+            $('.lang-en').addClass("hidden");
+    }
+}
+
+
+function current_age(birthday, today) {
+    var diff =(today.getTime() - birthday.getTime()) / 1000;
+    diff /= (60 * 60 * 24);
+    return Math.abs(Math.round(diff/365.25)); 
 }
 
 birthday = new Date("May 11, 1996");

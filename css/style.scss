@@ -10,11 +10,8 @@ $cvLightGray: #303032;
     grid-template-columns: 336px 1fr;
     max-width: 1280px;
     margin: auto;
-    font-family: 'HKGrotesk', 'Arial', 'Helvetica', sans-serif;
+    font-family: 'Arial', 'Helvetica', sans-serif;
     filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.15));
-
-
-
 
     h2, h3, h4{
         font-weight: lighter;
@@ -29,28 +26,25 @@ $cvLightGray: #303032;
     }
 
     .languageBar{
-        color: white;
-        background-color: #303032;
+        margin-bottom: 15px;
         display: flex;
         align-items: center;
         justify-content: center;
-        .languageSelect{
-            padding: 0;
-            display: flex;
-            li{
-                list-style-type: none;
-                cursor: pointer;
-                color: #999999;
-                border-radius: 5px;
-                padding: 5px;
-            }
-            .languageSeperator{
-                margin: 0 3px
-            }
-            .current{
-                color: white;
-                background-color: $cvAccent;
-            }
+        color: #999999;
+        input{
+            display: none;
+        }       
+        input + label{
+            border-radius: 5px;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .languageSeperator{
+            margin: 0 6px;
+        }
+        input:checked + label{
+            color: white;
+            background-color: $cvAccent;
         }
     }
 
@@ -129,10 +123,12 @@ $cvLightGray: #303032;
                 
             }
         }
+       
         .block{
             display: block;
             margin: 5px 0;
         }
+        
     }
 
     .rightCol{
