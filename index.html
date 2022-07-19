@@ -47,7 +47,7 @@
                     <a href="tel:+359896045241" class="contact text-base"><i class="fa-solid fa-mobile text-xl"></i> +359896045241</a>
                     <a href="mailto:nivandjikov96@gmail.com" class="contact text-base"><i class="fa-solid fa-envelope text-xl"></i> nivandjikov96@gmail.com</a>
                     <!-- <a href="nivandjikov.com" target="_blank" class="contact text-base"><i class="fa-solid fa-house text-xl"></i></i> ivandjikov.com</a> -->
-                    <a href="https://www.linkedin.com/in/nikola-ivandjikov-aab0211a3/" target="_blank" class="contact text-base"><i class="fa-brands fa-linkedin-in text-xl"></i> Nikola Ivandjikov</a>
+                    <a href="https://www.linkedin.com/in/nikola-ivandjikov/" target="_blank" class="contact text-base"><i class="fa-brands fa-linkedin-in text-xl"></i> Nikola Ivandjikov</a>
                 </div>
                 <div class="cv-skill">
                     <h2 class="text-xl lang-en">Professional Skills</h2>
@@ -90,11 +90,11 @@
                 <div class="cv-resume">
                     <div class="resume-title text-base">
                         <i class="fa-solid fa-user text-xl"></i>
-                        <h2 lang="en" class="lang-en">Profile</h2>
-                        <h2 lang="bg" class="lang-bg hidden">Профил</h2>
+                        <h2 class="lang-en">Profile</h2>
+                        <h2 class="lang-bg hidden">Профил</h2>
                     </div>
-                    <p class="text-lg lang-en">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    <p class="text-lg lang-bg hidden">Lorem Ipsum е просто фиктивен текст от печатарската и наборната индустрия. Lorem Ipsum е стандартният фиктивен текст в индустрията още от 1500 г., когато неизвестен печатар взел галера с шрифт и я задраскал, за да направи книга с образци на шрифта. Той е оцелял не само през петте века, но и през скока в електронното наборно печатане, като е останал по същество непроменен. Популяризиран е през 60-те години на миналия век с издаването на листове Letraset, съдържащи пасажи от Lorem Ipsum, а напоследък и със софтуера за настолно публикуване като Aldus PageMaker, включващ версии на Lorem Ipsum.</p>
+                    <p class="text-lg lang-en">Hello! My name is Nikola and I am <span class="current_age"></span> years old. I've been into computers since I was a kid, first I started with gaming, and then with attempts to build websites on the now non-existent free platform ovo.bg, and a few attempts on wordpress, which never reached the WWW. Those were the years when I decided that I would do Front-end. Fast forward <i class="fa-solid fa-arrow-right-long"></i> I graduated with a Bachelor's degree in "Software Technology and Design" from Plovdiv University "Paisii Hilendarski" in 2019. And since 2017 I have been actively working in IT.</p>
+                    <p class="text-lg lang-bg hidden">Здравейте! Казвам се Никола и съм на <span class="current_age"></span> години. От малък се занимавам с компютри, като първоначално започнах с игрите, а след това и с опити за построяване на сайтове във вече изчезналата безплатна платформа ovo.bg, както и няколко опита на wordpress, който така и не достигат до WWW. Това бяха годините в които реших, че ще се занимавам с Front-end. Бърз преход напред <i class="fa-solid fa-arrow-right-long"></i> Завърших бакалавър "Софтуерни технологии и дизайн" в Пловдивски университет "Паисий Хилендарски" през 2019г. А от 2017г. работя активно в IT сферата.</p>
                 </div>
                 <div class="cv-resume">
                     <div class="resume-title text-base">
@@ -103,8 +103,8 @@
                         <h2 class="lang-bg hidden">ТРУДОВ ОПИТ</h2>
                     </div>
                     <div class="cv-job">
-                        <h3 class="text-xl">First job</h3>
-                        <span class="company text-lg">Company name - Location <div class="workedUntil">2016-2020</div></span>
+                        <h3 class="text-xl">Front End developer/Landing page creator</h3>
+                        <span class="company text-lg">Laptop.bg - Remote <div class="workedUntil">Jan 2020-Present</div></span>
                         <p class="text-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                         <ul>
                             <li>Lorem Ipsum is simply dummy text of the print</li>
@@ -126,6 +126,8 @@
 
     </div>
 
+    <div id="age"></div>
+
 </body>
 </html>
 
@@ -133,7 +135,6 @@
 
 <script>
 $('.languageSelect .lngOpt').click(function(e) {
-
     //Toggle tab link
     $(this).addClass('current').siblings().removeClass('current');
 
@@ -147,4 +148,18 @@ $('.languageSelect .lngOpt').click(function(e) {
         $('.lang-bg').addClass("hidden");
     }
 });
+
+
+function current_age(birthday, today) 
+{
+  var diff =(today.getTime() - birthday.getTime()) / 1000;
+   diff /= (60 * 60 * 24);
+  return Math.abs(Math.round(diff/365.25));
+   
+}
+
+birthday = new Date("May 11, 1996");
+today = new Date();
+$('.current_age').html(current_age(birthday, today));
+
 </script>
