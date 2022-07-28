@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Scripts CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -196,57 +198,56 @@
 
     </div>
 
+    <script>
+        // Saving language select option in localStorage
+        $(document).ready(function(){
+            var radios = document.getElementsByName("languageSelect");
+            var val = localStorage.getItem('languageSelect');
+            for(var i=0;i<radios.length;i++){
+                if(radios[i].value == val){
+                radios[i].checked = true;
+                }
+            }
+            $('input[name="languageSelect"]').on('change', function(){
+                localStorage.setItem('languageSelect', $(this).val());
+            });
+            current_language();
+        });
+        
+        // Refreshing current language on page click
+        $(document).click(function(e) {
+            current_language();
+        });
+        
+        // Function checking what language option is checked, and switching hidden state
+        function current_language() {
+            if($('input#English').is(':checked')) {
+                $('.lang-en').removeClass("hidden"); 
+                $('.lang-bg').addClass("hidden");
+            }
+            else{
+                $('.lang-bg').removeClass("hidden");
+                $('.lang-en').addClass("hidden");
+            }
+        }
+        
+        //Count my current age
+        function current_age(birthday, today) {
+            var diff =(today.getTime() - birthday.getTime()) / 1000;
+            diff /= (60 * 60 * 24);
+            return Math.abs(Math.round(diff/365.25)); 
+        }
+        //Setting my birthday and getting the current date
+        var birthday = new Date("May 11, 1996");
+        var today = new Date();
+        
+        //Injectiong my current age in the html
+        $('.current_age').html(current_age(birthday, today));
+        
+        </script>
+
 </body>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-<script>
-// Saving language select option in localStorage
-$(document).ready(function(){
-    var radios = document.getElementsByName("languageSelect");
-    var val = localStorage.getItem('languageSelect');
-    for(var i=0;i<radios.length;i++){
-        if(radios[i].value == val){
-        radios[i].checked = true;
-        }
-    }
-    $('input[name="languageSelect"]').on('change', function(){
-        localStorage.setItem('languageSelect', $(this).val());
-    });
-    current_language();
-});
-
-// Refreshing current language on page click
-$(document).click(function(e) {
-    current_language();
-});
-
-// Function checking what language option is checked, and switching hidden state
-function current_language() {
-    if($('input#English').is(':checked')) {
-        $('.lang-en').removeClass("hidden"); 
-        $('.lang-bg').addClass("hidden");
-    }
-    else{
-        $('.lang-bg').removeClass("hidden");
-        $('.lang-en').addClass("hidden");
-    }
-}
-
-//Count my current age
-function current_age(birthday, today) {
-    var diff =(today.getTime() - birthday.getTime()) / 1000;
-    diff /= (60 * 60 * 24);
-    return Math.abs(Math.round(diff/365.25)); 
-}
-//Setting my birthday and getting the current date
-var birthday = new Date("May 11, 1996");
-var today = new Date();
-
-//Injectiong my current age in the html
-$('.current_age').html(current_age(birthday, today));
-
-</script>
 
 </html>
 
