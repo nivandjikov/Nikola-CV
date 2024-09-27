@@ -27,7 +27,7 @@
         <div class="leftCol">
             <div class="leftWrap">
                 <div class="languageBar text-sm">
-                    <input type="radio" name="languageSelect" value="English" id="English" checked />
+                    <input type="radio" name="languageSelect" value="English" id="English" />
                     <label for="English">English</label>
                     <span class="languageSeperator text-base">/</span>
                     <input type="radio" name="languageSelect" value="Bulgarian" id="Bulgarian" />
@@ -205,50 +205,51 @@
     </div>
 
     <script>
-        // Saving language select option in localStorage
-        $(document).ready(function(){
-            var radios = document.getElementsByName("languageSelect");
-            var val = localStorage.getItem('languageSelect');
-            for(var i=0;i<radios.length;i++){
-                if(radios[i].value == val){
-                radios[i].checked = true;
-                }
-            }
-            $('input[name="languageSelect"]').on('change', function(){
-                localStorage.setItem('languageSelect', $(this).val());
-            });
-            current_language();
-        });
-        
-        // Refreshing current language on page click
-        $(document).click(function(e) {
-            current_language();
-        });
-        
-        // Function checking what language option is checked, and switching hidden state
-        function current_language() {
-            if($('input#English').is(':checked')) {
+        // Checking for language option
+        function currentLanguage() {
+            const radios = document.getElementsByName("languageSelect");
+            const val = localStorage.getItem('languageSelect');
+            if(val == "English"){
+                $('#English').prop( "checked", true );
+                $('.lang-en').removeClass("hidden"); 
+                $('.lang-bg').addClass("hidden");
+            }else if (val == "Bulgarian"){
+                $('#Bulgarian').prop( "checked", true );
+                $('.lang-bg').removeClass("hidden");
+                $('.lang-en').addClass("hidden");
+            }else{
+                $('#English').prop( "checked", true );
                 $('.lang-en').removeClass("hidden"); 
                 $('.lang-bg').addClass("hidden");
             }
-            else{
-                $('.lang-bg').removeClass("hidden");
-                $('.lang-en').addClass("hidden");
-            }
-        }
+            console.log("test")
+        };
+        currentLanguage();
+
+
+        // Saving new language option in localStorage and calling back currentLanguge function
+        $('input[name="languageSelect"]').on('change', function(){
+            localStorage.setItem('languageSelect', $(this).val());
+            currentLanguage();
+        });
         
-        //Count my current age
+
+        
+        // Function to calculate the current age based on the birthday and current date
         function current_age(birthday, today) {
-            var diff =(today.getTime() - birthday.getTime()) / 1000;
+            var diff = (today.getTime() - birthday.getTime()) / 1000;
             diff /= (60 * 60 * 24);
-            return Math.abs(Math.round(diff/365.25)); 
+            return Math.abs(Math.round(diff / 365.25));
         }
-        //Setting my birthday and getting the current date
+
+        // Set the birthday and get today's date
         var birthday = new Date("May 11, 1996");
         var today = new Date();
-        
-        //Injectiong my current age in the html
-        $('.current_age').html(current_age(birthday, today));
+
+        // Inject the current age into the HTML element with the class 'current_age'
+        $(document).ready(function() {
+            $('.current_age').html(current_age(birthday, today));
+        });
         
         </script>
 
